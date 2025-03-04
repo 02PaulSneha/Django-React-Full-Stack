@@ -1,0 +1,40 @@
+/* Loader Container */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light gradient for a modern look */
+}
+
+/* Loader Animation */
+.loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.5); /* Softer white border */
+    border-top: 6px solid #007bff; /* Primary color */
+    animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Glowing effect */
+}
+
+/* Spin Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pulsating Glow Effect */
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); }
+    50% { box-shadow: 0 0 30px rgba(0, 123, 255, 0.9); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .loader {
+        width: 50px;
+        height: 50px;
+        border-width: 5px;
+    }
+}
